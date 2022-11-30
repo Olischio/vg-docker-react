@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: .
+    ports:
+    - '3000:3000'
+  database:
+    image: mysql:latest
+    volumes:
+      - "./mock/data.sql:/..."
